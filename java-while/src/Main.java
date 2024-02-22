@@ -2,14 +2,24 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String[] inscritos = { "MARCOS", "ALINE", "LUCAS", "PATRICIA", "JOAO", "FELIPE", "LUCIA", "ANTONIO", "FERNANDA",
+                "MARCELA", "VITOR", "BEATRIZ", "JORGE", "JULIA" };
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        final int numeroVagas = 10;
+
+        String[] vagas = new String[numeroVagas];
+
+        int vagaAtual = 0;
+
+        String inscrito = "Indefinido";
+        String log;
+
+        while (vagaAtual < numeroVagas) {
+            inscrito = inscritos[vagaAtual];
+            log = "Adicionando a inscrição: " + inscrito + " Na vaga: " + (vagaAtual + 1) + "\n";
+            vagas[vagaAtual] = inscrito;
+            vagaAtual += 1;
+            System.out.println(log);
         }
     }
 }
